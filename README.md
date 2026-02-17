@@ -111,13 +111,3 @@ python3 crtsh_enum.py -d example.com -s | sort -u > subs.txt
 3. Strips wildcard prefixes (`*.`) and deduplicates
 4. Optionally resolves each subdomain via `socket.getaddrinfo()` using a multiprocessing pool
 5. Outputs results with color coding to terminal, clean text to files
-
-## Color Coding
-
-| Color  | Meaning          |
-|--------|------------------|
-| Green  | Subdomain name   |
-| Yellow | Resolved IP(s)   |
-| Red    | NXDOMAIN (dead)  |
-
-Colors are automatically disabled when output is piped or redirected. Set `NO_COLOR=1` to force disable.
